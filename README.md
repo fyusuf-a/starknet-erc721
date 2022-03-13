@@ -210,7 +210,7 @@ nile deploy ERC721 arg1 arg2 arg3 --network goerli
 - Use [dummy token faucet](contracts/token/ERC20/dummy_token.cairo) to get dummy tokens
 - Use `ex5a_i_have_dtk()` to show you managed to use the faucet (2 pts)
 - Create a function to allow breeder registration.
-- This function should charge the registrant for a fee, paid in dummy tokens ([check `registration_price`](contracts/IExerciceSolution.cairo))
+- This function should charge the registrant for a fee, paid in dummy tokens ([check `registration_price`](contracts/IExerciceSolution.cairo)). The fee cannot be zero dummy token!
 - Add permissions. Only allow listed breeders should be able to create animals
 - Call `ex5b_register_breeder()` to prove your function works. If needed, send dummy tokens first to the evaluator (2pts)
 

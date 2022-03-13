@@ -367,6 +367,12 @@ func ex5b_register_breeder{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, ran
 
 	# Reading registration price. Registration is payable in dummy token
 	let (registration_price) = IExerciceSolution.registration_price(contract_address = submited_exercise_address)
+	# Checking that the registration price is not zero
+	if registration_price.low == 0:
+		if registration_price.high == 0:
+			assert 0 = 1
+		end
+	end
 	# Reading evaluator balance in dummy token
 	let (dummy_token_address) = dummy_token_address_storage.read()
 	let (dummy_token_init_balance) = IERC20.balanceOf(contract_address = dummy_token_address, account=evaluator_address)
